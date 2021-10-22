@@ -2,10 +2,10 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } fro
 import { v4 as uuid } from "uuid";
 
 @Entity("users")
-class User { //colulas da tabela
+class User { //colunas da tabela
 
     @PrimaryColumn()
-    readonly id: string; //valor somente por letura
+    readonly id: string; //valor somente como letura
 
     @Column()
     name: string;
@@ -23,7 +23,7 @@ class User { //colulas da tabela
     update_at: Date;
 
     constructor(){
-        if(!this.id){//se o id for diferente de uma id que ja existe ele cria um novo id = uuid
+        if(!this.id){//se o id for diferente de um id que ja existe ele cria um novo id = uuid
             this.id  = uuid();
         }
     }
