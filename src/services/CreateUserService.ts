@@ -1,6 +1,6 @@
 import { getCustomRepository } from "typeorm";
 import { UsersRepositories } from "../repositories/UsersRepositories";
-
+//regras da aplicaçao 
 interface IUserRequest{
     name: string;
     email: string;

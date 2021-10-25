@@ -1,6 +1,6 @@
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
-
+//relaçao onde tranforma um objeto de uma forma que o banco de dados possa entender 
 @Entity("users")
 class User { //colunas da tabela
 
