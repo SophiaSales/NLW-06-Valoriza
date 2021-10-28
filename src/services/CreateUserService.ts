@@ -10,7 +10,7 @@ interface IUserRequest{
 }
 
 class CreateUserService{
-    async execute({ name, email, admin, password}: IUserRequest){//tratativa pra saber se o usuario ja esta cadastrado 
+    async execute({ name, email, admin = false, password}: IUserRequest){//tratativa pra saber se o usuario ja esta cadastrado 
         const usersRepository = getCustomRepository(UsersRepositories);
         
         //se nao tiver nenhum email cadastrado aparecera o erro 
