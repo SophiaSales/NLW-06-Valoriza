@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 //relaçao onde tranforma um objeto de uma forma que o banco de dados possa entender 
@@ -16,6 +17,7 @@ class User { //colunas da tabela
     @Column()
     admin: boolean;
 
+    @Exclude()
     @Column()
     password: string;
 
